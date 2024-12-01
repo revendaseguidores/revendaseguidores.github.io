@@ -1,0 +1,30 @@
+.card {
+   margin-bottom: 20px;
+}
+
+#addBalanceForm {
+   margin-top: 20px;
+}
+
+#picpayLink {
+   display: block;
+   margin-top: 15px;
+}
+
+.instructions {
+   list-style-type: none;
+   padding-left: 0;
+}
+
+.instructions li {
+   margin-bottom: 10px;
+}
+
+.instructions li:before {
+   content: "\2022";
+   color: #007bff;
+   font-weight: bold;
+   display: inline-block;
+   width: 1em;
+   margin-left: -1em;
+}
