@@ -1,0 +1,464 @@
+body {
+   font-family: 'Poppins', sans-serif;
+   background-color: #f8f9fa;
+   padding-top: 76px; /* Add padding to account for fixed navbar */
+}
+
+.navbar {
+    transition: all 0.3s ease;
+}
+
+.navbar-brand {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.navbar-brand:hover {
+    color: #007bff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    width: 300px;
+}
+
+.nav-link {
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.nav-link.active {
+    font-weight: 700;
+    color: #ffc107 !important;
+}
+
+.form-container {
+   display: none;
+}
+
+.form-container.active {
+   display: block;
+}
+
+.form-card {
+   background-color: white;
+   border-radius: 15px;
+   padding: 50px;
+   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+
+.form-card h2 {
+   font-size: 2.5rem;
+   margin-bottom: 2rem;
+   font-weight: 600;
+}
+
+.form-card .form-label {
+   font-size: 1.1rem;
+   font-weight: 500;
+   margin-bottom: 0.5rem;
+}
+
+.form-card .form-control {
+   height: 50px;
+   font-size: 1.1rem;
+   border-radius: 10px;
+   border: 2px solid #e0e0e0;
+   padding: 0.5rem 1rem;
+   transition: border-color 0.3s ease;
+}
+
+.form-card .form-control:focus {
+   border-color: #007bff;
+   box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.form-card .btn {
+   height: 50px;
+   font-size: 1.2rem;
+   font-weight: 600;
+   border-radius: 10px;
+   margin-top: 1rem;
+   transition: all 0.3s ease;
+}
+
+.form-card .btn-warning {
+    width: 300px !important;
+    display: block;
+    margin: 30px auto 0;
+   background-color: #ffc307;
+   border-color: #ffc107;
+}
+
+.form-card .btn-warning:hover {
+   background-color: #d5a002;
+   border-color: #d5a002;
+}
+
+.form-card .btn-primary {
+    width: 300px !important;
+    display: block;
+    margin: 30px auto 0;
+   background-color: #007bff;
+   border-color: #007bff;
+}
+
+.form-card .btn-primary:hover {
+   background-color: #0056b3;
+   border-color: #004085;
+}
+
+.form-card p {
+   font-size: 1rem;
+   margin-top: 1.5rem;
+}
+
+.form-card a {
+   font-weight: 600;
+   text-decoration: none;
+   transition: color 0.3s ease;
+}
+
+.form-card a:hover {
+   text-decoration: underline;
+}
+
+.presentation {
+    display: flex;
+    align-items: baseline !important;
+}
+
+.contact-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.contact-logo {
+    font-size: 24px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.contact-logo:hover {
+    transform: scale(1.1);
+}
+
+.email-logo {
+    background-color: #D44638;
+    color: white;
+}
+
+.whatsapp-logo {
+    background-color: #25D366;
+    color: white;
+}
+
+.instagram-logo {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    color: white;
+}
+
+#hero {
+   background-color: #f8f9fa;
+   padding: 80px 0;
+}
+
+.card {
+   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+   border: none;
+   border-radius: 15px;
+   overflow: hidden;
+}
+
+.card:hover {
+   transform: translateY(-10px);
+   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.cta-container {
+   background: linear-gradient(135deg, #007bff, #0056b3);
+   border-radius: 15px;
+   padding: 60px;
+}
+
+.cta-container h2 {
+   font-weight: 700;
+   font-size: 3rem;
+   margin-bottom: 1.5rem;
+}
+
+.cta-container p {
+   font-size: 1.2rem;
+   margin-bottom: 2rem;
+}
+
+.cta-container .btn {
+   font-size: 1.2rem;
+   padding: 12px 30px;
+   border-radius: 10px;
+   font-weight: 600;
+   transition: all 0.3s ease;
+}
+
+#hero .col-lg-6 {
+   min-height: 700px;
+}
+
+/* Styles for contact icons */
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.contact-icon {
+    transition: all 0.3s ease;
+}
+
+.contact-icon:hover {
+    transform: scale(1.2);
+    opacity: 0.8;
+}
+
+.email-icon {
+    color: #D44638;
+}
+
+.whatsapp-icon {
+    color: #25D366;
+}
+
+.instagram-icon {
+    color: #E1306C;
+}
+
+/* Styles for Como Funciona section */
+#como-funciona .row {
+    position: relative;
+}
+
+.step-trail {
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    width: 75%;
+    height: 2px;
+    background-color: #007bff;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.step-icon-container {
+    position: relative;
+    z-index: 2;
+}
+
+.step-icon {
+    width: 80px;
+    height: 80px;
+    transition: all 0.3s ease;
+    background-color: #fff;
+    border: 2px solid #007bff;
+}
+
+.step-icon:hover {
+    transform: scale(1.1);
+}
+
+.step-number {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.banner {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+}
+
+.advantage-card {
+    transition: all 0.3s ease;
+}
+
+.advantage-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #e7f1ff;
+    color: #0056b3;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+    border-color: rgba(0, 123, 255, 0.25);
+}
+
+.accordion-button::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%230056b3'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+.accordion-body {
+    background-color: #f8f9fa;
+}
+
+/* Styles for fixed WhatsApp button */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    background-color: #128C7E;
+    color: #FFF;
+    transform: scale(1.1);
+}
+
+/* Estilos para o modal de carregamento */
+.modal-content {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: none;
+    border-radius: 15px;
+}
+
+.spinner-border {
+    width: 3rem;
+    height: 3rem;
+}
+
+#loadingMessage {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #007bff;
+    margin-top: 1rem;
+}
+
+/* Footer styles */
+footer {
+    background-color: #343a40;
+}
+
+footer h5 {
+    color: #007bff;
+    font-weight: 600;
+}
+
+footer ul li {
+    margin-bottom: 10px;
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #007bff;
+}
+
+footer .social-icons a {
+    font-size: 1.2rem;
+    margin-right: 15px;
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+footer .social-icons a:hover {
+    color: #007bff;
+}
+
+@media screen and (max-width: 767px) {
+    .logo {
+        width: 250px;
+    }
+
+    .form-card .btn-warning {
+        width: 100% !important;
+    }
+    
+    .form-card .btn-primary {
+        width: 100% !important;
+    }
+
+    
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 991.98px) {
+   .navbar-nav {
+       text-align: center;
+   }
+
+   .navbar-nav .btn {
+       margin-top: 10px;
+   }
+
+   #hero .col-lg-6 {
+       min-height: auto;
+   }
+
+   .cta-container, .form-card {
+       padding: 40px;
+   }
+
+   .cta-container h2 {
+       font-size: 2.5rem;
+   }
+
+   .step-trail {
+       display: none;
+   }
+
+   .step-icon-container {
+       margin-bottom: 30px;
+   }
+
+   body {
+       padding-top: 56px; /* Adjust padding for mobile */
+   }
+
+   footer .col-md-4 {
+       text-align: center;
+   }
+
+   footer .social-icons {
+       margin-top: 20px;
+   }
+}
