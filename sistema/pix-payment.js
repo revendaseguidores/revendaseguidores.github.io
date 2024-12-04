@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const pixPaymentData = JSON.parse(localStorage.getItem('pixPaymentData'));
     
     // Enviar requisição para adicionar Pix pendente
-    fetch('https://script.google.com/macros/s/AKfycbwg7C0z6SZIEkLTGoVM8VVTdvA7JhxyHW-1rjq-098oSGrNaeDn4tT_o8GV9XGL4VUL/exec', {
+    fetch('https://script.google.com/macros/s/AKfycbyIWaNnRnhhzHXhBbtvTiva9T_6yYwZf5VNkTzXULDG1zJYmLlGYwASEb131CigsrM/exec', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded',

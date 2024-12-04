@@ -3,7 +3,20 @@ document.addEventListener('DOMContentLoaded', function() {
     const registerForm = document.getElementById('registerForm');
     const loadingModal = new bootstrap.Modal(document.getElementById('loadingModal'));
 
-    toggleForm('login');
+    // Função para verificar se há um cupom na URL e ativar o formulário apropriado
+    function checkCouponAndToggleForm() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const couponCode = urlParams.get('cupom');
+        if (couponCode) {
+            toggleForm('register');
+            fillCouponFromURL();
+        } else {
+            toggleForm('login');
+        }
+    }
+
+    // Chamar a função de verificação de cupom ao carregar a página
+    checkCouponAndToggleForm();
     
     // Ensure contact logos are visible initially
     document.querySelectorAll('.contact-logos').forEach(logos => {
@@ -18,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
         showLoading('Fazendo login...');
         
         // Enviar dados para o Google Apps Script
-        fetch(`https://script.google.com/macros/s/AKfycbwg7C0z6SZIEkLTGoVM8VVTdvA7JhxyHW-1rjq-098oSGrNaeDn4tT_o8GV9XGL4VUL/exec?action=login&email=${encodeURIComponent(email)}&password=${encodeURIComponent(password)}`)
+        fetch(`https://script.google.com/macros/s/AKfycbyIWaNnRnhhzHXhBbtvTiva9T_6yYwZf5VNkTzXULDG1zJYmLlGYwASEb131CigsrM/exec?action=login&email=${encodeURIComponent(email)}&password=${encodeURIComponent(password)}`)
         .then(response => response.text())
         .then(result => {
             hideLoading();
@@ -43,11 +56,12 @@ document.addEventListener('DOMContentLoaded', function() {
         const email = document.getElementById('register-email').value;
         const whatsapp = document.getElementById('register-whatsapp').value;
         const password = document.getElementById('register-password').value;
+        const coupon = document.getElementById('register-coupon').value;
         
         showLoading('Realizando cadastro...');
         
         // Enviar dados para o Google Apps Script
-        fetch(`https://script.google.com/macros/s/AKfycbwg7C0z6SZIEkLTGoVM8VVTdvA7JhxyHW-1rjq-098oSGrNaeDn4tT_o8GV9XGL4VUL/exec?action=register&name=${encodeURIComponent(name)}&email=${encodeURIComponent(email)}&whatsapp=${encodeURIComponent(whatsapp)}&password=${encodeURIComponent(password)}`)
+        fetch(`https://script.google.com/macros/s/AKfycbyIWaNnRnhhzHXhBbtvTiva9T_6yYwZf5VNkTzXULDG1zJYmLlGYwASEb131CigsrM/exec?action=register&name=${encodeURIComponent(name)}&email=${encodeURIComponent(email)}&whatsapp=${encodeURIComponent(whatsapp)}&password=${encodeURIComponent(password)}&coupon=${encodeURIComponent(coupon)}`)
         .then(response => response.text())
         .then(result => {
             hideLoading();
@@ -84,8 +98,12 @@ function toggleForm(formType) {
     document.querySelectorAll('.contact-logos').forEach(logos => {
         logos.style.display = 'flex';
     });
-}
 
+    // Fill coupon field if switching to register form
+    if (formType === 'register') {
+        fillCouponFromURL();
+    }
+}
 
 function showLoading(message) {
     document.getElementById('loadingMessage').textContent = message;
@@ -112,7 +130,7 @@ function checkAuth() {
     } else {
         showLoading('Verificando autenticação...');
         // Verificar validade do token com o servidor
-        fetch(`https://script.google.com/macros/s/AKfycbwg7C0z6SZIEkLTGoVM8VVTdvA7JhxyHW-1rjq-098oSGrNaeDn4tT_o8GV9XGL4VUL/exec?action=verify_token&token=${encodeURIComponent(sessionToken)}`)
+        fetch(`https://script.google.com/macros/s/AKfycbyIWaNnRnhhzHXhBbtvTiva9T_6yYwZf5VNkTzXULDG1zJYmLlGYwASEb131CigsrM/exec?action=verify_token&token=${encodeURIComponent(sessionToken)}`)
         .then(response => response.text())
         .then(result => {
             hideLoading();
@@ -130,5 +148,16 @@ function checkAuth() {
     }
 }
 
-// Adicione esta linha no final do arquivo para garantir que o formulário de login seja exibido inicialmente
-document.addEventListener('DOMContentLoaded', () => toggleForm('login'));
+function fillCouponFromURL() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const couponCode = urlParams.get('cupom');
+    if (couponCode) {
+        const couponInput = document.getElementById('register-coupon');
+        if (couponInput) {
+            couponInput.value = couponCode;
+        }
+    }
+}
+
+// Remova esta linha, pois agora estamos usando checkCouponAndToggleForm()
+// document.addEventListener('DOMContentLoaded', () => toggleForm('login'));

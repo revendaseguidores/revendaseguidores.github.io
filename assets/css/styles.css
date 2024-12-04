@@ -132,6 +132,33 @@ body {
    text-decoration: underline;
 }
 
+/* Estilos existentes */
+
+.form-card .form-control {
+    height: 50px;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    border: 2px solid #e0e0e0;
+    padding: 0.5rem 1rem;
+    transition: border-color 0.3s ease;
+ }
+ 
+ .form-card .form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+ }
+ 
+ /* Novo estilo para o campo de cupom */
+ #register-coupon {
+     background-color: #f0f8ff; /* Cor de fundo azul claro */
+     border-color: #b0d4ff;
+ }
+ 
+ #register-coupon:focus {
+     background-color: #e6f3ff;
+     border-color: #007bff;
+ }
+ 
 .presentation {
     display: flex;
     align-items: baseline !important;

@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Fetch latest user data from server
     function loadUserDataFromServer() {
-        fetch(`https://script.google.com/macros/s/AKfycbwg7C0z6SZIEkLTGoVM8VVTdvA7JhxyHW-1rjq-098oSGrNaeDn4tT_o8GV9XGL4VUL/exec?action=get_user_data&token=${encodeURIComponent(sessionToken)}`)
+        fetch(`https://script.google.com/macros/s/AKfycbyIWaNnRnhhzHXhBbtvTiva9T_6yYwZf5VNkTzXULDG1zJYmLlGYwASEb131CigsrM/exec?action=get_user_data&token=${encodeURIComponent(sessionToken)}`)
         .then(response => response.json())
         .then(data => {
             const cachedData = JSON.parse(localStorage.getItem(USER_DATA_KEY));
@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const loadingModal = new bootstrap.Modal(document.getElementById('loadingModal'));
         loadingModal.show();
 
-        fetch('https://script.google.com/macros/s/AKfycbwg7C0z6SZIEkLTGoVM8VVTdvA7JhxyHW-1rjq-098oSGrNaeDn4tT_o8GV9XGL4VUL/exec', {
+        fetch('https://script.google.com/macros/s/AKfycbyIWaNnRnhhzHXhBbtvTiva9T_6yYwZf5VNkTzXULDG1zJYmLlGYwASEb131CigsrM/exec', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded',
