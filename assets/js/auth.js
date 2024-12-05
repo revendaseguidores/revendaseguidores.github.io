@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
         showLoading('Fazendo login...');
         
         // Enviar dados para o Google Apps Script
-        fetch(`https://script.google.com/macros/s/AKfycbyIWaNnRnhhzHXhBbtvTiva9T_6yYwZf5VNkTzXULDG1zJYmLlGYwASEb131CigsrM/exec?action=login&email=${encodeURIComponent(email)}&password=${encodeURIComponent(password)}`)
+        fetch(`https://script.google.com/macros/s/AKfycbz-7j3stfcJPgMytZTto7yrFuaxTvwCfQ-B4fx_W1KWLC5DWDg9WJ4XPbDe1luesa_a/exec?action=login&email=${encodeURIComponent(email)}&password=${encodeURIComponent(password)}`)
         .then(response => response.text())
         .then(result => {
             hideLoading();
@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
         showLoading('Realizando cadastro...');
         
         // Enviar dados para o Google Apps Script
-        fetch(`https://script.google.com/macros/s/AKfycbyIWaNnRnhhzHXhBbtvTiva9T_6yYwZf5VNkTzXULDG1zJYmLlGYwASEb131CigsrM/exec?action=register&name=${encodeURIComponent(name)}&email=${encodeURIComponent(email)}&whatsapp=${encodeURIComponent(whatsapp)}&password=${encodeURIComponent(password)}&coupon=${encodeURIComponent(coupon)}`)
+        fetch(`https://script.google.com/macros/s/AKfycbz-7j3stfcJPgMytZTto7yrFuaxTvwCfQ-B4fx_W1KWLC5DWDg9WJ4XPbDe1luesa_a/exec?action=register&name=${encodeURIComponent(name)}&email=${encodeURIComponent(email)}&whatsapp=${encodeURIComponent(whatsapp)}&password=${encodeURIComponent(password)}&coupon=${encodeURIComponent(coupon)}`)
         .then(response => response.text())
         .then(result => {
             hideLoading();
@@ -130,7 +130,7 @@ function checkAuth() {
     } else {
         showLoading('Verificando autenticação...');
         // Verificar validade do token com o servidor
-        fetch(`https://script.google.com/macros/s/AKfycbyIWaNnRnhhzHXhBbtvTiva9T_6yYwZf5VNkTzXULDG1zJYmLlGYwASEb131CigsrM/exec?action=verify_token&token=${encodeURIComponent(sessionToken)}`)
+        fetch(`https://script.google.com/macros/s/AKfycbz-7j3stfcJPgMytZTto7yrFuaxTvwCfQ-B4fx_W1KWLC5DWDg9WJ4XPbDe1luesa_a/exec?action=verify_token&token=${encodeURIComponent(sessionToken)}`)
         .then(response => response.text())
         .then(result => {
             hideLoading();

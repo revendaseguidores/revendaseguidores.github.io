@@ -33,7 +33,7 @@ function loadTicketsFromStorage() {
 
 function loadTicketsFromServer() {
     const sessionToken = localStorage.getItem('sessionToken');
-    fetch(`https://script.google.com/macros/s/AKfycbyIWaNnRnhhzHXhBbtvTiva9T_6yYwZf5VNkTzXULDG1zJYmLlGYwASEb131CigsrM/exec?action=get_user_tickets&token=${encodeURIComponent(sessionToken)}`)
+    fetch(`https://script.google.com/macros/s/AKfycbz-7j3stfcJPgMytZTto7yrFuaxTvwCfQ-B4fx_W1KWLC5DWDg9WJ4XPbDe1luesa_a/exec?action=get_user_tickets&token=${encodeURIComponent(sessionToken)}`)
     .then(response => response.json())
     .then(data => {
         if (data.success) {
@@ -71,7 +71,7 @@ function displayTickets(tickets) {
 function viewTicketDetails(ticketId) {
     const sessionToken = localStorage.getItem('sessionToken');
     showLoadingModal();
-    fetch(`https://script.google.com/macros/s/AKfycbyIWaNnRnhhzHXhBbtvTiva9T_6yYwZf5VNkTzXULDG1zJYmLlGYwASEb131CigsrM/exec?action=get_ticket_details&token=${encodeURIComponent(sessionToken)}&ticketId=${ticketId}`)
+    fetch(`https://script.google.com/macros/s/AKfycbz-7j3stfcJPgMytZTto7yrFuaxTvwCfQ-B4fx_W1KWLC5DWDg9WJ4XPbDe1luesa_a/exec?action=get_ticket_details&token=${encodeURIComponent(sessionToken)}&ticketId=${ticketId}`)
     .then(response => response.json())
     .then(data => {
         hideLoadingModal();
@@ -128,7 +128,7 @@ function createTicket() {
     isSubmitting = true;
     showLoadingModal();
 
-    fetch('https://script.google.com/macros/s/AKfycbyIWaNnRnhhzHXhBbtvTiva9T_6yYwZf5VNkTzXULDG1zJYmLlGYwASEb131CigsrM/exec', {
+    fetch('https://script.google.com/macros/s/AKfycbz-7j3stfcJPgMytZTto7yrFuaxTvwCfQ-B4fx_W1KWLC5DWDg9WJ4XPbDe1luesa_a/exec', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded',

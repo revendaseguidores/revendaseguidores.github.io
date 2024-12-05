@@ -31,7 +31,7 @@ function loadAndDisplayOrders() {
 function fetchAndUpdateOrders() {
     const sessionToken = localStorage.getItem('sessionToken');
     showUpdateIndicator();
-    fetch(`https://script.google.com/macros/s/AKfycbyIWaNnRnhhzHXhBbtvTiva9T_6yYwZf5VNkTzXULDG1zJYmLlGYwASEb131CigsrM/exec?action=get_user_orders&token=${encodeURIComponent(sessionToken)}`)
+    fetch(`https://script.google.com/macros/s/AKfycbz-7j3stfcJPgMytZTto7yrFuaxTvwCfQ-B4fx_W1KWLC5DWDg9WJ4XPbDe1luesa_a/exec?action=get_user_orders&token=${encodeURIComponent(sessionToken)}`)
     .then(response => response.json())
     .then(data => {
         if (Array.isArray(data) && data.length > 0) {
@@ -172,7 +172,7 @@ function checkAuth() {
 }
 
 function verifyToken(token) {
-    fetch(`https://script.google.com/macros/s/AKfycbyIWaNnRnhhzHXhBbtvTiva9T_6yYwZf5VNkTzXULDG1zJYmLlGYwASEb131CigsrM/exec?action=verify_token&token=${encodeURIComponent(token)}`)
+    fetch(`https://script.google.com/macros/s/AKfycbz-7j3stfcJPgMytZTto7yrFuaxTvwCfQ-B4fx_W1KWLC5DWDg9WJ4XPbDe1luesa_a/exec?action=verify_token&token=${encodeURIComponent(token)}`)
     .then(response => response.text())
     .then(result => {
         if (result !== 'valid') {
