@@ -17,6 +17,7 @@ const servicesData = [
    { id: 'tiktok_visualizacoes_lives', network: 'TikTok', service: 'Visualizações / Em Lives', min: 10, max: 10000, basePrice: 1.80 },
    { id: 'tiktok_comentarios_mundiais', network: 'TikTok', service: 'Comentários / Mundiais', min: 10, max: 10000, basePrice: 5.86 },
    { id: 'facebook_seguidores', network: 'Facebook', service: 'Seguidores', min: 500, max: 100000, basePrice: 1.70 },
+   { id: 'facebook_visualizacoes', network: 'Facebook', service: 'Visualizações em [Reels / Vídeos]', min: 50, max: 100000, basePrice: 0.35 },
    { id: 'facebook_comentarios_emojis', network: 'Facebook', service: 'Comentários Emojis / Avaliações', min: 50, max: 20000, basePrice: 1.10 },
    { id: 'facebook_curtidas_pagina', network: 'Facebook', service: 'Curtidas em Página', min: 100, max: 1000000, basePrice: 1.40 },
    { id: 'facebook_curtidas_publicacao', network: 'Facebook', service: 'Curtidas em Publicação', min: 50, max: 100000, basePrice: 1.15 },
