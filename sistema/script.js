@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', function() {
    function calculatePrice(basePrice, quantity) {
        const pricePerUnit = basePrice / 100; // Calculate price per unit
        const pricePerQuantity = pricePerUnit * quantity;
-       return (pricePerQuantity * 0.1) + pricePerQuantity + 2; // Calculate total price
+       return (pricePerQuantity * 0.1) + pricePerQuantity + 4; // Calculate total price
    }
 
    function updateValorPagar() {
